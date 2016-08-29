@@ -1,0 +1,125 @@
+<div class="row" id="opener-row">
+  <div class="col-xs-12" id="opener">
+    <h1>Hi, I'm Alex Lach.</h1>
+    <h2>I am a New Haven-based web developer. <br>I wear many hats.</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-4 col-xs-offset-4 arrow-box">
+    <div class="sub-arrow-box">
+      <img src='assets/arrow.png' id='arrow'></img>
+      <img src='assets/arrow.png' id='arrow'></img>
+      <img src='assets/arrow.png' id='arrow'></img>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12" id="hat-pictures">
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1" id="hat1">
+            <%= image_tag "hat-1.jpg", class:"img-responsive hat-picture" %>
+            <p>Work <br /><small> In my previous life, I was a political consultant. I worked with grassroots organizations across Massachusetts to do cool things, like raise the minimum wage and improve our public transportation system. </small></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1" id="hat2">
+            <%= image_tag "hat-2.jpg", class:"img-responsive hat-picture" %>
+            <p> Learn <br /><small>I recently changed careers to become a full-time web developer, and I haven't looked back. I love to create, build, and tinker, and am seeking opportunities to make the world better with code.</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1" id="hat3">
+            <%= image_tag "hat-3.jpg", class:"img-responsive hat-picture" %>
+            <p> Play <br /><small>In my free time, I love to move. I try to lift heavy things at Commonwealth CrossFit, play soccer and basketball on the weekends, and hike in New Hampshire and Maine during the summer.</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12" id="get-in-touch">
+    <h2>Get In Touch:</h2>
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-1">
+        <div class="row">
+          <div class="col-xs-12">
+            <%= link_to "https://github.com/alexglach" do %>
+              <%= image_tag "GitHub-Mark-120px-plus.png", class:"img-responsive" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <div class="row">
+          <div class="col-xs-12">
+            <%= link_to "https://medium.com/@alexglach" do %>
+              <%= image_tag "medium-m-color-688.png", class:"img-responsive" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <div class="row">
+          <div class="col-xs-12">
+            <%= link_to "https://twitter.com/alexglach" do %>
+              <%= image_tag "tw.png", class:"img-responsive" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <div class="row">
+          <div class="col-xs-12">
+            <%= link_to "https://www.linkedin.com/in/alex-lach-28921236" do %>
+              <%= image_tag "linkedin-icon-white.png", class:"img-responsive" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <div class="row">
+          <div class="col-xs-12">
+            <%= link_to "mailto:alexglach@gmail.com" do %>
+              <%= image_tag "email.png", class:"img-responsive" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+  $('#hat1').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  $('#hat2').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  $('#hat3').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  $(window).scroll(function() {
+
+          if ($(this).scrollTop()>0)
+           {
+              $('.arrow-box').fadeOut();
+           }
+          else
+           {
+            $('.arrow-box').fadeIn();
+           }
+       });
+  </script>
